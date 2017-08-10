@@ -1,0 +1,12 @@
+<template>
+    <div>
+        <p>{{ test }}</p>
+        <div v-if="bug">
+            <h1>{{ bug.name }}</h1>
+            <h3>{{ bug.bugStatus }}</h3>
+        </div>
+        <projtask :bugid="bugid" ></projtask>
+    </div>
+</template>
+
+<script src="./bugs.ts" />

@@ -1,0 +1,15 @@
+<template>
+    <div>
+        <h2>Project A</h2>
+        <p>{{ test }} </p>
+        <h4>Bugs</h4>
+         <div class="list-group">
+            <div v-for="x in bugs">
+            <a class="list-group-item" v-bind:href="'/bug/' + x.id"> {{ x.name }} - <small>{{ x.bugStatus }}</small>
+                <span class="badge"> {{ x.id }}</span></a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script src="./project.ts"></script>

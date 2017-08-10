@@ -1,0 +1,12 @@
+<template>
+    <div>
+        <a v-bind:href="'/client/' + client.id">{{ client.alias }}</a>
+        <span style="float:right">
+        <input type="checkbox" v-model="checked" value="false"/>
+        </span>
+         <p v-if="checked">{{ checked }}</p>
+         <input v-if="checked" type="text" v-model="client.alias" v-bind:placeholder="client.alias"/>
+    </div>
+</template>
+
+<script src="./clientitem.ts"></script>

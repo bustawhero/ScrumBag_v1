@@ -1,0 +1,18 @@
+<template>
+    <div>
+        <h1>Login</h1>
+        <h4>{{ UserName }}</h4>
+        <div class="panel-default"> 
+            <div class="form-group">
+                <label for="Username">User Name</label>
+                <input type="text" v-model="UserName" class="form-control">
+            </div>
+            <div>
+                <label for="Passord">Password</label>
+                <input type="password"  class="form-control" v-model="Password" >
+            </div>
+            <button clas="btn btn-primary" v-on:click="login">Sign In</button>
+        </div>
+    </div>
+</template>
+<script src="./login.ts"></script>

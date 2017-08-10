@@ -1,0 +1,49 @@
+<template>
+    <div>
+        <h2>Client ID:  {{ clientid }}</h2>
+        <div class="list-group">
+            <div v-for="x in projects">
+            <a class="list-group-item" v-bind:href="'/project/' + x.id"> {{ x.descr }}
+                <span class="badge"> {{ x.bugCount }}</span></a>
+            </div>
+        </div>
+        <button class="btn btn-success">Add Projects
+            <span style="margin-left:2px">
+                <input type="checkbox" />
+            </span>
+        </button>
+        <div>
+            <h3>Add Projects</h3>
+            <div class="form-inline">
+                <label>Project Name</label>
+                <input type="text" class="form-control" placeholder="ProjectName"/>
+                <span style="margin:5px"/>
+                <label>Project Type</label>
+                <input type="text" class="form-control" placeholder="ProjectType"/>
+                <span style="margin:5px"/>
+                <input type="checkbox" class="form-control" />
+            </div>
+        </div>
+        <div>
+            <h3>Add Bugs</h3>
+            <div class="form-inline">
+                <label>Bug Name</label>
+                <input type="text" class="form-control" placeholder="Bug Name"/>
+                <span style="margin:5px"/>
+                <label>Bug Type</label>
+                <input type="text" class="form-control" placeholder="Bug Type"/>
+                <span style="margin:5px"/>
+                <input type="button" class="form-control btn btn-primary" v-on:click="addBug" value="Add Bug" />
+                <pre>{{ proj }}</pre>
+            </div>
+        </div>
+        <button class="btn btn-success" v-on:click="addProj">Add Projects
+            <span style="margin-left:2px">
+                <input type="checkbox" />
+            </span>
+        </button>
+    </div>  
+</template>
+
+
+<script src="./client.ts"></script>

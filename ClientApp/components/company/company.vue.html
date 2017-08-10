@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <h2>  {{ company.name }} </h2>
+         <h4> {{ _dictionary.Get(1) }} </h4> 
+        <h4>Clients </h4>
+        <div class="list-group">
+            <div v-for="x in clients" class="list-group-item" >
+                <clientitem :client="x"></clientitem>
+            </div>
+        </div>
+        <button class="btn btn-primary" v-on:click="add" > Add </button>
+        <button class="btn btn-primary" v-on:click="updateData" > Update </button>
+    </div>
+</template>
+
+<script src="./company.ts"></script>
